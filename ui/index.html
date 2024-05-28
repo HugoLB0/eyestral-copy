@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eyestral</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+
+  <h1 class="text-4xl font-bold mb-6 text-center text-blue-900">Eyestral</h1>
+  
+  <div id="camera" class="w-full max-w-md bg-white rounded-lg overflow-hidden shadow-lg mb-6">
+    <video id="video" class="w-full h-full object-cover" autoplay></video>
+  </div>
+  
+  <div class="flex space-x-4 mb-6">
+    <button id="startButton" class="bg-green-500 text-white text-2xl font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-300">Start</button>
+    <button id="stopButton" class="bg-red-500 text-white text-2xl font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300">Stop</button>
+    <button id="speakButton" class="bg-blue-500 text-white text-2xl font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">Speak</button>
+  </div>
+
+  <div id="transcriptions" class="mt-6 w-full max-w-md bg-white p-4 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center">Voice Decode</h2>
+    <div id="results" class="text-xl text-gray-700"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
